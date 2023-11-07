@@ -8,7 +8,7 @@ long max = 0;
 
 int main(void)
 {
-	printf("Ââåäèòå òðè öåëûé ÷èñëà\n");
+	printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚Ñ€Ð¸ Ñ†ÐµÐ»Ñ‹Ð¹ Ñ‡Ð¸ÑÐ»Ð°\n");
 	scanf("%ld %ld %ld\n",&a,&b,&c);
 	if (a>b && a>c) max = a;
 	if (b>a && b>c) max = b;
