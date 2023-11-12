@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <inttypes.h>
+
+uint16_t a = 0;
+uint16_t b = 0;
+uint8_t i = 0;
+
+int main(void)
+{
+	printf("Введите два целых числа по модулю не больше 100 \n");
+	scanf("%hu %hu \n",&a,&b);
+	
+	if (a > 100 || b > 100)
+	{
+		printf("Ошибка ввода, число больше 100 \n");
+		return 0;
+	}
+	
+	for (i = a;i < b;i++)
+	{
+		printf("%d %d ", i, i*i);
+	}
+	return 0;
+}
+
