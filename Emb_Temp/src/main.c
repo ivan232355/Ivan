@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
             break;
         case 'M':
         	input = atoi(optarg);
-        	int Max_temp = Month_Stat_max(data, input, 16); 					// нахождение минимальной температуры в указанном месяце
+        	int Max_temp = Month_Stat_max(data, input, 16); 					// нахождение максимальной температуры в указанном месяце
         	printf("Maximum temperature in the %d month = %d\n",input,Max_temp);
             break;
         }
