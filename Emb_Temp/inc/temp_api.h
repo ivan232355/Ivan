@@ -17,9 +17,12 @@ struct Temp_Data
     int8_t temperature;
 };
 
-void Month_Stat_averge (struct Temp_Data data[], uint8_t size); 	//среднемесячная температура
-void Month_Stat_min (struct Temp_Data data[], uint8_t size); 		//минимальная температура в текущем месяце
-void Month_Stat_max (struct Temp_Data data[], uint8_t size); 		//максимальная температура в текущем месяце
-void Year_Stat (struct Temp_Data data[], uint8_t size);			//вывод статистики за год
-void GetData_csv(FILE*file);								//получение данных из файла
+struct Temp_Data data[16];
+
+int Month_Stat_averge(struct Temp_Data data[], int target_month,uint8_t size); 	//среднемесячная температура
+int Month_Stat_min (struct Temp_Data data[], int target_month,uint8_t size); 		//минимальная температура в текущем месяце
+int Month_Stat_max (struct Temp_Data data[], int target_month,uint8_t size);		//максимальная температура в текущем месяце
+void Year_Stat (struct Temp_Data data[], uint8_t size);				//вывод статистики за год
+void GetData_csv(FILE*file);										//получение данных из файла
+int Open_csv(void);											//функция открытия файла
 #endif
