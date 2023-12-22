@@ -60,8 +60,8 @@ int main(int argc, char *argv[])
         	printf("----Max  temperature = %d\n",max_temp);
         break;
         case '?':
-			printf("Incorrect input.Enter -h to get help \n");
-		break;
+		printf("Incorrect input.Enter -h to get help \n");
+	break;
         }
     }
 }
