@@ -29,25 +29,25 @@ int main(int argc, char *argv[])
             printf("-m\t\t Minimum temperature in the current month\n"); // минимальная температура в текущем месяце
             printf("-M\t\t Maximum temperature in the current month\n"); // максимальная температура в текущем месяце
             printf("-y\t\t Output statistics for the year\n");           // вывод статистики за год
-            break;
+        break;
         case 'f':
         	Open_csv();
-            break;
+        break;
         case 'a':
         	input = atoi(optarg);
         	int Average_temp = Month_Stat_averge(data_csv, input, 16); 				// нахождение средней температуры в указанном месяце
         	printf("Average  temperature in %d monthly = %d\n",input,Average_temp);
-            break;
+        break;
         case 'm':
         	input = atoi(optarg);
         	int Min_temp = Month_Stat_min(data_csv, input, 16); 					// нахождение минимальной температуры в указанном месяце
         	printf("Minimum temperature in the %d month = %d\n",input,Min_temp);
-            break;
+        break;
         case 'M':
         	input = atoi(optarg);
         	int Max_temp = Month_Stat_max(data_csv, input, 16); 					// нахождение максимальной температуры в указанном месяце
         	printf("Maximum temperature in the %d month = %d\n",input,Max_temp);
-            break;
+        break;
         case 'y':
         	input = atoi(optarg);
         	int av_temp;
@@ -58,7 +58,10 @@ int main(int argc, char *argv[])
         	printf("----Average  temperature = %d\n",av_temp);
         	printf("----Min  temperature = %d\n",min_temp);
         	printf("----Max  temperature = %d\n",max_temp);
-            break;
+        break;
+        case '?':
+			printf("Incorrect input.Enter -h to get help \n");
+		break;
         }
     }
 }
